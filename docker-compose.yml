@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  web:
+    image: nginx:latest
+    container_name: web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+    networks:
+      - devops-network
+  db:
+    image: mysql:latest
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: exampledb
+    ports:
+      - "3306:3306"
+    networks:
+      - devops-network
+    volumes:
+      - db-data:/var/lib/mysql
+
+networks:
+  devops-network:
+    driver: bridge
+
+volumes:
+  db-data:
+

@@ -1,5 +1,6 @@
 #!/bin/bash
 
-# Мониторинг ресурсов контейнеров
-docker stats
+# Мониторинг состояния контейнеров
+docker stats --no-stream
+
 

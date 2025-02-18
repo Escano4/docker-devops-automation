@@ -1,6 +1,13 @@
-# Игнорировать временные файлы и каталоги
+# Docker
 *.log
-*.tmp
-.DS_Store
-node_modules/
+*.pid
+*.swp
+
+# Игнорируем временные файлы Docker
+.docker/
+docker-compose.override.yml
+
+# Игнорируем файлы конфигурации IDE
+.idea/
+.vscode/
 

@@ -1,5 +1,8 @@
 #!/bin/bash
 
 # Просмотр логов всех контейнеров
-docker-compose logs -f
+
+docker logs web
+docker logs db
+
 
