@@ -1,0 +1,6 @@
+# Используем официальный образ Nginx
+FROM nginx:latest
+
+# Копируем статические файлы в контейнер
+COPY ./html /usr/share/nginx/html
+

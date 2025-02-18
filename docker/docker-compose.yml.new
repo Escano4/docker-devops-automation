@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  web:
+    build: ./docker
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
